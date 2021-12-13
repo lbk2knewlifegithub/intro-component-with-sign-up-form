@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div
-      class="relative h-screen w-full bg-fill grid place-items-center place-content-center"
+      class="relative  w-full bg-fill grid place-items-center place-content-center lg:h-screen"
     >
       <!-- background image mobile -->
       <img
@@ -23,9 +23,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       />
       <!-- end background image desktop-->
 
-      <div
-        class="container z-50 grid gap-16 lg:grid-cols-2"
-      >
+      <div class="container z-50 grid gap-16 py-32 lg:py-0 lg:grid-cols-2">
         <!-- text -->
         <div
           class="grid max-w-xl place-items-center place-content-center lg:place-items-start"
@@ -36,7 +34,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             Learn to code by watching others
           </h1>
 
-          <p class="mt-6 font-medium text-center text-white lg:text-left">
+          <p class="mt-6 font-medium text-center  text-white lg:text-left">
             See how experienced developers solve problems in real-time. Watching
             scripted tutorials is great, but understaning how developers think
             is invaluable.
@@ -46,13 +44,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
         <div class="grid gap-6">
           <!-- try button -->
-            <div class="w-full btn btn-primary">
-              <strong class="font-black">Try it free 7 days </strong>
-              <span class="text-gray-200 font-thin"
-                >then <br class="sm:hidden" />
-                $20/mo. thereafter.</span
-              >
-            </div>
+          <div class="w-full btn btn-primary">
+            <strong class="font-black">Try it free 7 days </strong>
+            <span class="text-gray-200 font-thin"
+              >then <br class="sm:hidden" />
+              $20/mo. thereafter.</span
+            >
+          </div>
           <!-- end try button -->
 
           <!-- sign up form -->
