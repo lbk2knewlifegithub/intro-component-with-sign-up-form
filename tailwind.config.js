@@ -14,16 +14,13 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
   mode: "jit",
-  purge: {
-    enabled: isProduction,
-    content: [join(__dirname, "src/**/*.{html,ts}")],
-  },
+  content: [join(__dirname, "src/**/*.{html,ts}")],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: "2rem",
+        DEFAULT: "1rem",
         xl: "0rem",
       },
     },
@@ -63,7 +60,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/aspect-ratio"),
     function ({ addComponents }) {
       addComponents({
         ".container": {
